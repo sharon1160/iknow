@@ -1,5 +1,7 @@
 # iknow
 
+Aplicación móvil para un sistema de getión administrativo.
+
 ## Integrantes :pushpin:
 
 - Andrade Guzmán, Carlos Porfirio
