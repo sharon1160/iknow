@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 35.0,),
               Flexible(
                 child: Image.asset('assets/icons/login.png',
-                  height: 50.0,
+                  height: 170.0,
                   scale: 1.0,
                 ),
               ),
