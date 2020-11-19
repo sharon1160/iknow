@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
+import 'package:iknow/screens/signup/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
 
@@ -25,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 35.0,),
               Flexible(
                 child: Image.asset('assets/icons/login.png',
-                  height: 170.0,
+                  height: 150.0,
                   scale: 1.0,
                 ),
               ),
@@ -37,7 +38,16 @@ class _LoginScreenState extends State<LoginScreen> {
               _buttonLogin(),
               SizedBox(height: 10.0,),
               AlreadyHaveAnAccountChecked(
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context){
+                        return SignUpScreen();
+                      },
+                    ),
+                  );
+                },
               ),
             ],
           ),
@@ -79,7 +89,7 @@ _passwordTextField(){
           obscureText: true,
           decoration: InputDecoration( 
             icon: Icon(Icons.lock),
-            hintText: '********',
+            hintText: '',
             labelText: 'Password',
             suffixIcon: Icon(
               Icons.visibility,
@@ -115,7 +125,18 @@ Widget _buttonLogin(){
         ),
         elevation: 10.0,
         color: Colors.tealAccent[400],
-        onPressed:(){}
+        onPressed:(){
+          /*
+          Navigator.push(
+            context, 
+            MaterialPageRoute(
+              builder: (context){
+                return MainScreen();
+              },
+            ),
+          );
+          */
+        }
       );
     }
   );
