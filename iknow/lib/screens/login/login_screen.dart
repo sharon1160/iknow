@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
+import 'package:iknow/screens/home/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
 
@@ -126,16 +127,16 @@ Widget _buttonLogin(){
         elevation: 10.0,
         color: Colors.tealAccent[400],
         onPressed:(){
-          /*
+    
           Navigator.push(
             context, 
             MaterialPageRoute(
               builder: (context){
-                return MainScreen();
+                return HomeScreen();
               },
             ),
           );
-          */
+          
         }
       );
     }
