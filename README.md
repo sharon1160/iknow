@@ -4,7 +4,7 @@ Aplicación móvil para un sistema de getión administrativa.
 
 ## Integrantes :pushpin:
 
-- Andrade Guzmán, Carlos Porfirio
+- Andrade Guzmán, Carlo
 - Chullunquía Rosas, Sharon Rossely
 - Paredes Escobedo, Fernanda Anthoanette 
 - Vilca Alvites, Cecilia del Pilar
