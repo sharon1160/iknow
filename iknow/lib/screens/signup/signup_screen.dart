@@ -1,8 +1,17 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:iknow/screens/home/home_screen.dart';
+
+String emailRegister;
+String nameRegister;
+String areaRegister;
+String passwordRegister;
+final _auth = FirebaseAuth.instance;
 
 class SignUpScreen extends StatefulWidget {
 
   static String id = 'signup';
+
 
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
@@ -62,6 +71,7 @@ Widget _nameTextField(){
             labelText: 'Name',
           ),
           onChanged: (value){
+            nameRegister = value;
           },
         ),
       );
@@ -105,7 +115,7 @@ Widget _userTextField(){
             labelText: 'Email',
           ),
           onChanged: (value){
-            // brbrbr
+            emailRegister = value;
           },
         ),
       );
@@ -126,7 +136,7 @@ Widget _areaTextField(){
             labelText: 'Area',
           ),
           onChanged: (value){
-            // brbrbr
+            areaRegister = value;
           },
         ),
       );
@@ -152,7 +162,7 @@ _passwordTextField(){
             ),
           ),
           onChanged: (value){
-            // brbrbr
+            passwordRegister = value;
           },
         ),
       );
@@ -179,7 +189,20 @@ Widget _buttonSignUp(){
         ),
         elevation: 10.0,
         color: Colors.tealAccent[400],
-        onPressed:(){}
+        onPressed:() async {
+          try{
+            final newUser = _auth.createUserWithEmailAndPassword(email: emailRegister, password: passwordRegister);
+            if (newUser != null){
+              Navigator.push(context,
+                MaterialPageRoute(
+                  builder: (context){
+                    return HomeScreen();
+                  },
+                ),
+              );
+            }
+          }catch(e) {print(e);}
+        }
       );
     }
   );

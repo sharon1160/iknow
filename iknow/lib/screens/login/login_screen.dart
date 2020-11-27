@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
 import 'package:iknow/screens/home/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+String email;
+String password;
+
+final _auth = FirebaseAuth.instance;
 
 class LoginScreen extends StatefulWidget {
 
@@ -12,6 +18,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,13 +76,13 @@ Widget _userTextField(){
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         child: TextField(
           keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration( 
+          decoration: InputDecoration(
             icon: Icon(Icons.email),
             hintText: 'example@gmail.com',
             labelText: 'Email',
           ),
           onChanged: (value){
-            // brbrbr
+            email = value;
           },
         ),
       );
@@ -98,7 +108,7 @@ _passwordTextField(){
             ),
           ),
           onChanged: (value){
-            // brbrbr
+            password = value;
           },
         ),
       );
@@ -126,17 +136,25 @@ Widget _buttonLogin(){
         ),
         elevation: 10.0,
         color: Colors.tealAccent[400],
-        onPressed:(){
-    
-          Navigator.push(
-            context, 
-            MaterialPageRoute(
-              builder: (context){
-                return HomeScreen();
-              },
-            ),
-          );
-          
+        onPressed:() async {
+          print(email);
+          try{
+            print('probando---------------------------------------------------');
+            final user = await _auth.signInWithEmailAndPassword(
+                email: email, password: password);
+            if(user != null){
+              print('correcto---------------------------------------------------');
+              Navigator.push(context,
+                MaterialPageRoute(
+                  builder: (context){
+                    return HomeScreen();
+                  },
+                ),
+              );
+            }
+          }catch(e){
+            print('error****************************************************');
+            print(e);}
         }
       );
     }
