@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:iknow/screens/login/login_screen.dart';
 import 'package:iknow/constants.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -19,6 +20,14 @@ class BottomNavBar extends StatelessWidget {
           BottomNavItem(
             tittle: "Log out",
             svgScr: "assets/icons/back.svg",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context){
+                  return LoginScreen();
+                }),
+              );
+            },
           ),
           BottomNavItem(
             tittle: "Settings",
