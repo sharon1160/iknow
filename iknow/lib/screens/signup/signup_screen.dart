@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:iknow/screens/home/home_screen.dart';
+import 'package:iknow/screens/login/login_screen.dart';
 
 String emailRegister;
 String nameRegister;
@@ -132,7 +132,7 @@ Widget _areaTextField(){
           keyboardType: TextInputType.text,
           decoration: InputDecoration( 
             icon: Icon(Icons.group ),
-            hintText: 'Admin. , Tesoreria, etc',
+            hintText: 'Administración , Tesoreria, ...',
             labelText: 'Area',
           ),
           onChanged: (value){
@@ -188,7 +188,7 @@ Widget _buttonSignUp(){
           borderRadius: BorderRadius.circular(5),
         ),
         elevation: 10.0,
-        color: Colors.tealAccent[400],
+        color: Color(0xff24dcbb),
         onPressed:() async {
           try{
             final newUser = _auth.createUserWithEmailAndPassword(email: emailRegister, password: passwordRegister);
@@ -196,7 +196,7 @@ Widget _buttonSignUp(){
               Navigator.push(context,
                 MaterialPageRoute(
                   builder: (context){
-                    return HomeScreen();
+                    return LoginScreen();
                   },
                 ),
               );
