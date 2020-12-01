@@ -135,10 +135,12 @@ Widget _buttonLogin(){
           borderRadius: BorderRadius.circular(5),
         ),
         elevation: 10.0,
-        color: Colors.tealAccent[400],
+        color: Color(0xff24dcbb),
         onPressed:() async {
           print(email);
+          /*
           try{
+        
             print('probando---------------------------------------------------');
             final user = await _auth.signInWithEmailAndPassword(
                 email: email, password: password);
@@ -155,6 +157,14 @@ Widget _buttonLogin(){
           }catch(e){
             print('error****************************************************');
             print(e);}
+          */
+          Navigator.push(context,
+            MaterialPageRoute(
+              builder: (context){
+                return HomeScreen();
+              },
+            ),
+          );
         }
       );
     }
