@@ -102,7 +102,7 @@ class HomeScreen2 extends StatelessWidget{
                       children: <Widget>[
                         CategoryCard(
                           title: "Documentos Recientes",
-                          svgSrc: "assets/Img/icons8-pasado-48.svg",
+                          svgSrc: "assets/Img/reloj.svg",
                           press: () {},
                         ),
                         CategoryCard(
@@ -119,7 +119,7 @@ class HomeScreen2 extends StatelessWidget{
                         ),
                         CategoryCard(
                           title: "Mis Documentos",
-                          svgSrc: "assets/Img/icons8-guardar-48.svg",
+                          svgSrc: "assets/Img/guardar.svg",
                           press: () {},
                         ),
                       ],
