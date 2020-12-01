@@ -12,7 +12,7 @@ class Doc {
   });
 }
 
-final countries = [
+final plantillas = [
   new Doc(name:'Jaime Francisco',doc:'Doc. Nro 0001',fecha:'11-01-2020',code: 9498700),
   new Doc(name:'Andrea Caceres',doc:'Doc. Nro 0002',fecha:'11-01-2020',code: 7153784),
   new Doc(name:'Ruth Silvana Tejada',doc:'Doc. Nro 0003',fecha:'11-01-2020',code: 10558524),
