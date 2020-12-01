@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/semantics.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iknow/screens/home/widgets/bottom_nav_bar.dart';
 import 'package:iknow/constants.dart';
 import 'package:iknow/screens/plantillas/plantillas_screen.dart';
 import 'package:iknow/screens/home/widgets/category_card.dart';
-// import 'package:iknow/screens/home/components/docs.dart';
+import 'package:iknow/screens/mis documentos/mis_documentos_screen.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -120,7 +119,14 @@ class HomeScreen2 extends StatelessWidget{
                         CategoryCard(
                           title: "Mis Documentos",
                           svgSrc: "assets/Img/guardar.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context){
+                                return MisDocumentosScreen();
+                              }),
+                            );
+                          },
                         ),
                       ],
                     ),
