@@ -1,16 +1,22 @@
-# iknow
+# iknow - Versión 1.0.0
 
-A new Flutter project.
+Esta aplicación esta siendo creada para la gestión de documentos en el área de logísitica de una municipalidad. El problema central radica en el manejo de documentos importantes por parte de las partes implicadas, lo cual genera un gran déficit en el manejo de requerimientos de bienes y servicios por parte del estado.
 
-## Getting Started
+## Características funcionales principales
 
-This project is a starting point for a Flutter application.
+La principal característica de esta aplicación es la gestión de documentos, es decir: crear, guardar y visualizarlos, así como modificar o eliminarlos. 
+En esta primera revisión tenemos la interfaz de registro, de login y el home para usuarios, así como una primera etapa de creación de documentos en formato pdf, los cuales podrán ser eliminados o modificados, y vistos por cada usuario.
+ 
+### Registro
 
-A few resources to get you started if this is your first Flutter project:
+> El registro de usuarios es con nombre y apellidos, correo (gmail que es el que maneja la municipalidad) y un password.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Login
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> El ingreso a la aplicación es con nombre y el password que corresponde. 
+
+### Home
+
+> Al ingresar a la aplicación cada usuario podrá observar sus documentos creados, buscarlos, eliminarlos, crear uno nuevo, o editar alguno.
+
+
