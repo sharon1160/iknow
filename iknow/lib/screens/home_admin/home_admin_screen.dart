@@ -2,20 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iknow/screens/home/widgets/bottom_nav_bar.dart';
 import 'package:iknow/constants.dart';
-import 'package:iknow/screens/plantillas/plantillas_screen.dart';
 import 'package:iknow/screens/home/widgets/category_card.dart';
-import 'package:iknow/screens/mis documentos/mis_documentos_screen.dart';
-import 'package:iknow/screens/documentos recientes/documentos_recientes_screen.dart';
+import 'package:iknow/screens/bienes_admin/bienes_admin_screen.dart';
+import 'package:iknow/screens/servicios_admin/servicios_admin_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeAdminScreen extends StatefulWidget {
 
-  static String id = 'home';
+  static String id = 'home_admin';
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomeAdminScreenState createState() => _HomeAdminScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeAdminScreenState extends State<HomeAdminScreen> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -28,12 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
         //primarySwatch: Colors.blue,
       ),
-      home: HomeScreen2(),
+      home: HomeAdminScreen2(),
     );
   }
 }
 
-class HomeScreen2 extends StatelessWidget{
+class HomeAdminScreen2 extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     var size = MediaQuery.of(context)
@@ -101,37 +100,25 @@ class HomeScreen2 extends StatelessWidget{
                       mainAxisSpacing: 20,
                       children: <Widget>[
                         CategoryCard(
-                          title: "Documentos Recientes",
-                          svgSrc: "assets/Img/reloj.svg",
+                          title: "Bienes",
+                          svgSrc: "assets/Img/bienes.svg",
                           press: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context){
-                                return DocumentosRecientesScreen();
+                                return BienesAdminScreen();
                               }),
                             );
                           },
                         ),
                         CategoryCard(
-                          title: "Plantillas",
-                          svgSrc: "assets/Img/icons8-formularios-de-google-48.svg",
+                          title: "Servicios",
+                          svgSrc: "assets/Img/servicios.svg",
                           press: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context){
-                                return PlantillasScreen();
-                              }),
-                            );
-                          },
-                        ),
-                        CategoryCard(
-                          title: "Mis Documentos",
-                          svgSrc: "assets/Img/guardar.svg",
-                          press: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context){
-                                return MisDocumentosScreen();
+                                return ServiciosAdminScreen();
                               }),
                             );
                           },

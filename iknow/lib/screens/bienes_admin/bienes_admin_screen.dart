@@ -1,40 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:iknow/screens/home/home_screen.dart';
+import 'package:iknow/screens/home_admin/home_admin_screen.dart';
 
 
 // Main Stateful Widget Start
-class MisDocumentosScreen extends StatefulWidget {
+class BienesAdminScreen extends StatefulWidget {
   @override
-  _MisDocumentosScreenState createState() => _MisDocumentosScreenState();
+  _BienesAdminScreenState createState() => _BienesAdminScreenState();
 }
 
-class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
+class _BienesAdminScreenState extends State<BienesAdminScreen> {
   // Title List Here
   var titleList = [
     "Requerimiento de Bienes N° 001-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 001-2020-MDC/G-MCR",
-    "Requerimiento de Bienes N° 002-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 002-2020-MDC/G-MCR"
-    "Requerimiento de Bienes N° 003-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 003-2020-MDC/G-MCR",
-    "Requerimiento de Bienes N° 004-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 004-2020-MDC/G-MCR",
-    "Requerimiento de Bienes N° 005-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 005-2020-MDC/G-MCR"
+    "Requerimiento de Bienes N° 002-2020-MDC/G-JCP",
+    "Requerimiento de Bienes N° 003-2020-MDC/G-AMR",
+    "Requerimiento de Bienes N° 004-2020-MDC/G-DCV",
+    "Requerimiento de Bienes N° 005-2020-MDC/G-TTD",
+    "Requerimiento de Bienes N° 006-2020-MDC/G-MSR",
+    "Requerimiento de Bienes N° 007-2020-MDC/G-AJQ",
+    "Requerimiento de Bienes N° 008-2020-MDC/G-VHF",
+  ];
+
+  // Autores
+  var autList = [
+    "Hecho por: Marcela Caceres Roca",
+    "Hecho por: Juana Calcina Palacios",
+    "Hecho por: Ana Mendoza Rosales",
+    "Hecho por: Daniel Castro Valverde",
+    "Hecho por: Tatiana Tapia Duran",
+    "Hecho por: Margot Suarez Roquez",
+    "Hecho por: Ana Jara Quispe",
+    "Hecho por: Valeria Huaman Flores"
   ];
 
   // Description List Here
   var descList = [
     "+ Especificaciones Técnicas.",
-    "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
-    "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
-    "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
-    "+ Términos de Referencia."
+    "+ Especificaciones Técnicas.",
+    "+ Especificaciones Técnicas.",
+    "+ Especificaciones Técnicas.",
+    "+ Especificaciones Técnicas."
   ];
+
+  
 
   // Fechas
   var fechList = [
@@ -50,14 +62,14 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
 
   // Image Name List Here
   var imgList = [
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png"
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png",
+    "assets/icons/avatar.png"
   ];
 
   @override
@@ -68,7 +80,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
       appBar: AppBar(
         // App Bar
         title: Text(
-          "Mis Documentos",
+          "Bienes",
           style: Theme.of(context)
               .textTheme
               .headline6
@@ -130,6 +142,19 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
                         Container(
                           width: width,
                           child: Text(
+                            autList[index], // autor
+                            maxLines: 3,
+                            style: TextStyle(
+                                fontSize: 10, color: Colors.grey[500]),
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          width: width,
+                          child: Text(
                             fechList[index], // fecha
                             maxLines: 3,
                             style: TextStyle(
@@ -144,7 +169,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
                     onTap: () {Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context){
-                          return HomeScreen2();
+                          return HomeAdminScreen();
                         }),
                       );
                     },

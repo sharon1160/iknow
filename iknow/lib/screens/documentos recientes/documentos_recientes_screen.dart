@@ -4,32 +4,22 @@ import 'package:iknow/screens/home/home_screen.dart';
 
 
 // Main Stateful Widget Start
-class MisDocumentosScreen extends StatefulWidget {
+class DocumentosRecientesScreen extends StatefulWidget {
   @override
-  _MisDocumentosScreenState createState() => _MisDocumentosScreenState();
+  _DocumentosRecientesScreenState createState() => _DocumentosRecientesScreenState();
 }
 
-class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
+class _DocumentosRecientesScreenState extends State<DocumentosRecientesScreen> {
   // Title List Here
   var titleList = [
     "Requerimiento de Bienes N° 001-2020-MDC/G-MCR",
     "Requerimiento de Servicios N° 001-2020-MDC/G-MCR",
     "Requerimiento de Bienes N° 002-2020-MDC/G-MCR",
     "Requerimiento de Servicios N° 002-2020-MDC/G-MCR"
-    "Requerimiento de Bienes N° 003-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 003-2020-MDC/G-MCR",
-    "Requerimiento de Bienes N° 004-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 004-2020-MDC/G-MCR",
-    "Requerimiento de Bienes N° 005-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 005-2020-MDC/G-MCR"
   ];
 
   // Description List Here
   var descList = [
-    "+ Especificaciones Técnicas.",
-    "+ Términos de Referencia.",
-    "+ Especificaciones Técnicas.",
-    "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
     "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
@@ -41,23 +31,15 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
     "Fecha: 01/12/2020",
     "Fecha: 29/11/2020",
     "Fecha: 28/11/2020",
-    "Fecha: 27/11/2020",
-    "Fecha: 26/11/2020",
-    "Fecha: 25/11/2020",
-    "Fecha: 24/11/2020",
-    "Fecha: 23/11/2020"
+    "Fecha: 27/11/2020"
   ];
 
   // Image Name List Here
   var imgList = [
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png"
+    "assets/icons/recents.png",
+    "assets/icons/recents.png",
+    "assets/icons/recents.png",
+    "assets/icons/recents.png"
   ];
 
   @override
@@ -68,7 +50,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
       appBar: AppBar(
         // App Bar
         title: Text(
-          "Mis Documentos",
+          "Documentos Recientes",
           style: Theme.of(context)
               .textTheme
               .headline6
