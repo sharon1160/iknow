@@ -1,6 +1,6 @@
 # iknow
 
-Aplicación móvil para un sistema de getión administrativa.
+Aplicación móvil para un sistema de gestión administrativa.
 
 ## Integrantes :pushpin:
 
