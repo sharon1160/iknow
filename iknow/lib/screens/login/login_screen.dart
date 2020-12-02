@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
-import 'package:iknow/screens/home/home_screen.dart';
+import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
+//import 'package:iknow/screens/home_admin/home_admin_screen.dart'; // ADMINISTRADOR
 import 'package:firebase_auth/firebase_auth.dart';
 
 String email;
@@ -18,9 +19,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -161,7 +159,8 @@ Widget _buttonLogin(){
           Navigator.push(context,
             MaterialPageRoute(
               builder: (context){
-                return HomeScreen();
+                return HomeScreen(); // USUARIO COMUN
+                //return HomeAdminScreen(); // ADMINISTRADOR
               },
             ),
           );
