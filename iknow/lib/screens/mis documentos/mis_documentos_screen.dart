@@ -130,7 +130,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
                         Container(
                           width: width,
                           child: Text(
-                            fechList[index], // descripcion
+                            fechList[index], // fecha
                             maxLines: 3,
                             style: TextStyle(
                                 fontSize: 10, color: Colors.grey[500]),
