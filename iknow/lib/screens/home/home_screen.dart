@@ -5,6 +5,7 @@ import 'package:iknow/constants.dart';
 import 'package:iknow/screens/plantillas/plantillas_screen.dart';
 import 'package:iknow/screens/home/widgets/category_card.dart';
 import 'package:iknow/screens/mis documentos/mis_documentos_screen.dart';
+import 'package:iknow/screens/documentos recientes/documentos_recientes_screen.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -102,7 +103,14 @@ class HomeScreen2 extends StatelessWidget{
                         CategoryCard(
                           title: "Documentos Recientes",
                           svgSrc: "assets/Img/reloj.svg",
-                          press: () {},
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context){
+                                return DocumentosRecientesScreen();
+                              }),
+                            );
+                          },
                         ),
                         CategoryCard(
                           title: "Plantillas",
