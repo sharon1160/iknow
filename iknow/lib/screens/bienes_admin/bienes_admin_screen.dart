@@ -94,7 +94,7 @@ class _BienesAdminScreenState extends State<BienesAdminScreen> {
                         .headline6
                         .copyWith(fontWeight: FontWeight.w300),
                   ),
-                  background: SvgPicture.asset("assets/icons/descargar.svg"),
+                  background: Image.asset("assets/background/p.jpg",fit: BoxFit.cover),
               ),
             ),
           ];
