@@ -82,7 +82,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
                         .headline6
                         .copyWith(fontWeight: FontWeight.w300),
                   ),
-                  background: SvgPicture.asset("assets/icons/descargar.svg"),
+                  background: Image.asset("assets/background/bienes_servicios.jpg",fit: BoxFit.cover),
               ),
             ),
           ];

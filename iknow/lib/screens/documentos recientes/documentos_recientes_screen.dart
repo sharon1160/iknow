@@ -64,7 +64,7 @@ class _DocumentosRecientesScreenState extends State<DocumentosRecientesScreen> {
                         .headline6
                         .copyWith(fontWeight: FontWeight.w300),
                   ),
-                  background: SvgPicture.asset("assets/icons/descargar.svg"),
+                  background: Image.asset("assets/background/doc8.jpg",fit: BoxFit.cover),
               ),
             ),
           ];
