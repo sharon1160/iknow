@@ -94,7 +94,7 @@ class _ServiciosAdminScreenState extends State<ServiciosAdminScreen> {
                         .headline6
                         .copyWith(fontWeight: FontWeight.w300),
                   ),
-                  background: SvgPicture.asset("assets/icons/descargar.svg"),
+                  background: Image.asset("assets/background/misdocss.jpg",fit: BoxFit.cover),
               ),
             ),
           ];

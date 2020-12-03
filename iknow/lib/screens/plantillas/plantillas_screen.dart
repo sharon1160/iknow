@@ -54,7 +54,7 @@ class _PlantillasScreenState extends State<PlantillasScreen> {
                         .headline6
                         .copyWith(fontWeight: FontWeight.w300),
                   ),
-                  background: SvgPicture.asset("assets/icons/descargar.svg"),
+                  background: Image.asset("assets/background/plant_2.jpg",fit: BoxFit.cover),
               ),
             ),
           ];
