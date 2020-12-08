@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:iknow/screens/home/home_screen.dart';
+import 'package:iknow/screens/plantillas/components/bienes/plantillas_bienes.dart';
+import 'package:iknow/screens/plantillas/components/servicios/plantillas_servicios.dart';
 
 
 // Main Stateful Widget Start
@@ -30,6 +31,11 @@ class _PlantillasScreenState extends State<PlantillasScreen> {
   var imgList = [
     "assets/iconos/icons8-reanudar-plantilla-50.png",
     "assets/iconos/icons8-reanudar-plantilla-50.png"
+  ];
+
+  var rutas = [
+    PlantillasBienesScreen(),
+    PlantillasServiciosScreen()
   ];
 
   @override
@@ -113,7 +119,7 @@ class _PlantillasScreenState extends State<PlantillasScreen> {
                       onTap: () {Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context){
-                            return HomeScreen2();
+                            return rutas[index];
                           }),
                         );
                       },
