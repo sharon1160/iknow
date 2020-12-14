@@ -35,6 +35,8 @@ dependencies:
   meta:
   cloud_firestore:
 
+  flutter_signin_button:
+
 
 dev_dependencies:
   flutter_test:

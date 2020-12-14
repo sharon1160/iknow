@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
 import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
@@ -58,7 +59,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 },
               ),
+              SignInButton(
+                Buttons.Google,
+                padding: const EdgeInsets.all(5), //anchura
+                onPressed: (){} ,
+              )
             ],
+
           ),
         ),
       ),
