@@ -85,9 +85,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 },
               ),
+              SizedBox(height: 40.0,),
               SignInButton(
                 Buttons.Google,
-                padding: const EdgeInsets.all(5), //anchura
+                padding: EdgeInsets.symmetric(horizontal: 45.0, vertical:8), //anchura
                 // onPressed: () => googleSignIn().whenComplete(() async {
                 //   User user = await FirebaseAuth.instance.currentUser;
                 //
