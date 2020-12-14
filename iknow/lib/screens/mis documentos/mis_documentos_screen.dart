@@ -10,8 +10,10 @@ class MisDocumentosScreen extends StatefulWidget {
 }
 
 class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
+
+
   // Title List Here
-  var titleList = [
+  List titleList = [
     "Requerimiento de Bienes N° 001-2020-MDC/G-MCR",
     "Requerimiento de Servicios N° 001-2020-MDC/G-MCR",
     "Requerimiento de Bienes N° 002-2020-MDC/G-MCR",
@@ -23,7 +25,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
   ];
 
   // Description List Here
-  var descList = [
+  List descList = [
     "+ Especificaciones Técnicas.",
     "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
@@ -35,7 +37,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
   ];
 
   // Fechas
-  var fechList = [
+  List fechList = [
     "Fecha: 01/12/2020",
     "Fecha: 29/11/2020",
     "Fecha: 28/11/2020",
@@ -47,7 +49,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
   ];
 
   // Image Name List Here
-  var imgList = [
+  List imgList = [
     "assets/iconos/icons8-documentos-48.png",
     "assets/iconos/servi.png",
     "assets/iconos/icons8-documentos-48.png",
@@ -57,6 +59,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
     "assets/iconos/icons8-documentos-48.png",
     "assets/iconos/servi.png"
   ];
+
 
   @override
   Widget build(BuildContext context) {
