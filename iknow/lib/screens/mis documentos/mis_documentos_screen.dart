@@ -10,22 +10,22 @@ class MisDocumentosScreen extends StatefulWidget {
 }
 
 class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
+
+
   // Title List Here
-  var titleList = [
+  List titleList = [
     "Requerimiento de Bienes N° 001-2020-MDC/G-MCR",
     "Requerimiento de Servicios N° 001-2020-MDC/G-MCR",
     "Requerimiento de Bienes N° 002-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 002-2020-MDC/G-MCR"
+    "Requerimiento de Servicios N° 002-2020-MDC/G-MCR",
     "Requerimiento de Bienes N° 003-2020-MDC/G-MCR",
     "Requerimiento de Servicios N° 003-2020-MDC/G-MCR",
     "Requerimiento de Bienes N° 004-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 004-2020-MDC/G-MCR",
-    "Requerimiento de Bienes N° 005-2020-MDC/G-MCR",
-    "Requerimiento de Servicios N° 005-2020-MDC/G-MCR"
+    "Requerimiento de Servicios N° 004-2020-MDC/G-MCR"
   ];
 
   // Description List Here
-  var descList = [
+  List descList = [
     "+ Especificaciones Técnicas.",
     "+ Términos de Referencia.",
     "+ Especificaciones Técnicas.",
@@ -37,7 +37,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
   ];
 
   // Fechas
-  var fechList = [
+  List fechList = [
     "Fecha: 01/12/2020",
     "Fecha: 29/11/2020",
     "Fecha: 28/11/2020",
@@ -49,16 +49,17 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
   ];
 
   // Image Name List Here
-  var imgList = [
+  List imgList = [
     "assets/iconos/icons8-documentos-48.png",
+    "assets/iconos/servi.png",
     "assets/iconos/icons8-documentos-48.png",
+    "assets/iconos/servi.png",
     "assets/iconos/icons8-documentos-48.png",
+    "assets/iconos/servi.png",
     "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png",
-    "assets/iconos/icons8-documentos-48.png"
+    "assets/iconos/servi.png"
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -73,14 +74,28 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
               floating: false,
               pinned: true,
               backgroundColor: Color(0xff24dcbb),
+              actions: <Widget>[ 
+                IconButton( 
+                  icon: Icon(Icons.search), 
+                  tooltip: 'Search Icon', 
+                  onPressed: () {}, 
+                ), //IconButton 
+                IconButton( 
+                  icon: Icon(Icons.tune), 
+                  tooltip: 'Filter Icon', 
+                  onPressed: () {}, 
+                ), //IconButton 
+              ],
               flexibleSpace: FlexibleSpaceBar(
                   centerTitle: true,
                   title: Text(
                     "Mis Documentos",
                     style: Theme.of(context)
                         .textTheme
-                        .headline6
-                        .copyWith(fontWeight: FontWeight.w300),
+                        .subtitle1
+                        .copyWith(
+                          fontWeight: FontWeight.w300/*, color: Colors.white*/, 
+                        ),
                   ),
                   background: Image.asset("assets/background/bienes_servicios.jpg",fit: BoxFit.cover),
               ),

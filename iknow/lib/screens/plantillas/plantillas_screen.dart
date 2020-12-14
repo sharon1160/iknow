@@ -29,8 +29,8 @@ class _PlantillasScreenState extends State<PlantillasScreen> {
 
   // Image Name List Here
   var imgList = [
-    "assets/iconos/icons8-reanudar-plantilla-50.png",
-    "assets/iconos/icons8-reanudar-plantilla-50.png"
+    "assets/iconos/plant1.png",
+    "assets/iconos/plant2.png"
   ];
 
   var rutas = [
