@@ -95,6 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 //   Navigator.of(context).pushReplacement(MaterialPageRoute(
                 //       builder: (context) => HomeScreen()));
                 // }),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
                 onPressed: _signIn,
               )
             ],
