@@ -6,7 +6,6 @@ import 'package:iknow/screens/signup/signup_screen.dart';
 import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
 //import 'package:iknow/screens/home_admin/home_admin_screen.dart'; // ADMINISTRADOR
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:iknow/controllers/authentications.dart';
 
 String email;
 String password;
