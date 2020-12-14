@@ -132,6 +132,7 @@ class HomeScreen2 extends StatelessWidget{
                               context,
                               MaterialPageRoute(builder: (context){
                                 return MisDocumentosScreen();
+                                //return SearchPage();
                               }),
                             );
                           },
