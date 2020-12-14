@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:iknow/controllers/authentications.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
 import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
@@ -7,6 +9,31 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 String email;
 String password;
+
+void _signIn() async {
+  try{
+    final creds = await googleSignIn();
+    print('a**************************************************************************************************');
+    print('b**************************************************************************************************');
+    print('c**************************************************************************************************');
+    print('d**************************************************************************************************');
+    print('e**************************************************************************************************');
+    print('f**************************************************************************************************');
+    print(creds);
+    print('a**************************************************************************************************');
+    print('b**************************************************************************************************');
+    print('c**************************************************************************************************');
+    print('d**************************************************************************************************');
+    print('e**************************************************************************************************');
+    print('f**************************************************************************************************');
+
+
+  }catch(e){
+    print('No se puede logea: $e');
+    print('ibncorrecto*********************************************');
+
+  }
+}
 
 final _auth = FirebaseAuth.instance;
 
@@ -58,7 +85,23 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 },
               ),
+              SizedBox(height: 40.0,),
+              SignInButton(
+                Buttons.Google,
+                padding: EdgeInsets.symmetric(horizontal: 45.0, vertical:8), //anchura
+                // onPressed: () => googleSignIn().whenComplete(() async {
+                //   User user = await FirebaseAuth.instance.currentUser;
+                //
+                //   Navigator.of(context).pushReplacement(MaterialPageRoute(
+                //       builder: (context) => HomeScreen()));
+                // }),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                onPressed: _signIn,
+              )
             ],
+
           ),
         ),
       ),
