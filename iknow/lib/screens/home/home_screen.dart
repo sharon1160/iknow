@@ -131,6 +131,7 @@ class HomeScreen2 extends StatelessWidget{
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context){
+                                //return MisDocumentosScreen();
                                 return MisDocumentosScreen();
                                 //return SearchPage();
                               }),
