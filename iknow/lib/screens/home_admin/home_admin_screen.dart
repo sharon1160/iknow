@@ -78,19 +78,30 @@ class HomeAdminScreen2 extends StatelessWidget{
                         .copyWith(fontWeight: FontWeight.w300),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 30),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 1),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(7),
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Search",
-                        icon: SvgPicture.asset("assets/icons/search.svg"),
-                        border: InputBorder.none,
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    child:  Material(
+                      color: Colors.transparent,
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.white,
+                        ),
+                        child: Material(
+                          elevation: 3.0,
+                          shadowColor: Colors.grey,
+                          borderRadius: BorderRadius.circular(100),
+                          child: TextField(
+                            style: TextStyle(fontSize: 15, color: Colors.black87),
+                            decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.search, color: Colors.black38),
+                              hintText: "Search here",
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+                    )
                   ),
                   Expanded(
                     child: GridView.count(
