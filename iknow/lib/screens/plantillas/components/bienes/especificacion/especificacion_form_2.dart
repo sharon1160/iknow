@@ -20,60 +20,58 @@ class _EspecificacionForm2State extends State<EspecificacionForm2> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
+                      child: Text('Lugar de Entrega'),
+                    ),
                     TextFormField(
                       decoration: 
                           InputDecoration(
-                            labelText: 'Encabezado',
+                            labelText: 'Direccion y horario',
                             labelStyle: TextStyle(fontSize: 12.0),
                           ),
                     ),
                     Container(
                       padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
-                      child: Text('Objeto'),
+                      child: Text('Plazo de Entrega'),
                     ),
                     TextFormField(
                       decoration: 
                           InputDecoration(
-                            labelText: 'Objeto',
+                            labelText: 'Plazo de entrega en dias, semanas, meses',
                             labelStyle: TextStyle(fontSize: 12.0),
                           ),
                     ),
                     Container(
                       padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
-                      child: Text('Descripción a Detalle'),
+                      child: Text('Conformidad del Bien'),
                     ),
                     TextFormField(
                       decoration: 
                           InputDecoration(
-                            labelText: 'N°',
+                            labelText: '',
                             labelStyle: TextStyle(fontSize: 12.0),
                           ),
                     ),
-                    TextFormField(
-                      decoration: 
-                          InputDecoration(
-                            labelText: 'Cantidad',
-                            labelStyle: TextStyle(fontSize: 12.0),
-                          ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
+                      child: Text('Forma y Condiciones de Pago'),
                     ),
                     TextFormField(
                       decoration: 
                           InputDecoration(
-                            labelText: 'U.M.',
+                            labelText: 'Pago único o parcial',
                             labelStyle: TextStyle(fontSize: 12.0),
                           ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
+                      child: Text('Garantía'),
                     ),
                     TextFormField(
                       decoration: 
                           InputDecoration(
-                            labelText: 'Descripción',
-                            labelStyle: TextStyle(fontSize: 12.0),
-                          ),
-                    ),
-                    TextFormField(
-                      decoration: 
-                          InputDecoration(
-                            labelText: 'Monto Aproximado',
+                            labelText: '(Solo en caso de ser necesario)',
                             labelStyle: TextStyle(fontSize: 12.0),
                           ),
                     ),
