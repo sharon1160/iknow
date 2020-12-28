@@ -137,7 +137,7 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
                     "Mis Documentos",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle1
+                        .headline6
                         .copyWith(
                           fontWeight: FontWeight.w300/*, color: Colors.white*/, 
                         ),

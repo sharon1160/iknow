@@ -122,7 +122,7 @@ class _DocumentosRecientesScreenState extends State<DocumentosRecientesScreen> {
                     "Documentos Recientes",
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle1
+                        .headline6
                         .copyWith(
                           fontWeight: FontWeight.w300/*, color: Colors.white*/, 
                         ),
