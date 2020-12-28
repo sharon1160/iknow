@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iknow/screens/plantillas/components/bienes/especificacion/especificacion_plantilla.dart';
 import 'package:iknow/screens/plantillas/components/bienes/requerimiento/requerimiento_plantilla_screen.dart';
 
  
@@ -59,8 +60,8 @@ class _PlantillasBienesScreenState extends State<PlantillasBienesScreen> with Si
       body: new TabBarView(
         controller: _tabController,
         children: [
-              MyApp(),
-              Icon(Icons.directions_transit)
+              MyApp(), //cccccccccccccccccccc
+              MyApp2()
         ],
 
       ),
