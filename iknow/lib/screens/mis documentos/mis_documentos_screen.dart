@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iknow/screens/home/home_screen.dart';
+import 'package:iknow/screens/mis documentos/filters.dart';
 
 class MisDocumentosScreen extends StatefulWidget{
   @override
@@ -48,7 +49,6 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
       "Requerimiento de Bienes N° 004-2020-MDC/G-MCR",
       "Requerimiento de Servicios N° 004-2020-MDC/G-MCR"
     ];
-    titleList.sort();
 
     descList = new List<String>();
     descList = [
@@ -61,7 +61,6 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
       "+ Especificaciones Técnicas.",
       "+ Términos de Referencia."
     ];
-    descList.sort();
 
     fechList = new List<String>();
     fechList = [
@@ -74,7 +73,6 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
       "Fecha: 24/11/2020",
       "Fecha: 23/11/2020"
     ];
-    fechList.sort();
 
     imgList = new List<String>();
     imgList = [
@@ -87,12 +85,11 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
       "assets/iconos/icons8-documentos-48.png",
       "assets/iconos/servi.png"
     ];
-    imgList.sort();
   }
 
   
 
-  _HomePageState() {
+  _MisDocumentosScreenState() {
     _searchview.addListener(() {
       if(_searchview.text.isEmpty) {
         setState(() {
@@ -112,51 +109,79 @@ class _MisDocumentosScreenState extends State<MisDocumentosScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        backgroundColor: Color(0xff24dcbb),
-        actions: <Widget>[ 
-          IconButton( 
-            icon: Icon(Icons.tune), 
-            tooltip: 'Filter Icon', 
-            onPressed: () {}, 
-          ), 
-        ],
-        title: Text(
-          "Mis Documentos",
-          style: Theme.of(context)
-              .textTheme
-              .headline6
-              .copyWith(
-                fontWeight: FontWeight.w300/*, color: Colors.white*/, 
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return <Widget>[
+            SliverAppBar(
+              expandedHeight: 200.0,
+              floating: false,
+              pinned: true,
+              backgroundColor: Color(0xff24dcbb),
+              actions: <Widget>[ 
+                IconButton( 
+                  icon: Icon(Icons.tune), 
+                  tooltip: 'Filter Icon', 
+                  onPressed: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FilterScreen(),
+                      ),
+                    );
+                  }, 
+                ), //IconButton 
+              ],
+              flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: Text(
+                    "Mis Documentos",
+                    style: Theme.of(context)
+                        .textTheme
+                        .subtitle1
+                        .copyWith(
+                          fontWeight: FontWeight.w300/*, color: Colors.white*/, 
+                        ),
+                  ),
+                  background: Image.asset("assets/background/bienes_servicios.jpg",fit: BoxFit.cover),
               ),
+            ),
+          ];
+        },
+        body: new Container(
+          margin: EdgeInsets.only(left: 1.0, right: 1.0, top: 10.0),
+          child: new Column(
+            children: <Widget> [
+              _createSearchView(),
+              _firstSearch ? _createListView(context) : _performSearch()
+            ],
+          ),
         ),
-      ),
-      body: new Container(
-        margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-        child: new Column(
-          children: <Widget> [
-            _createSearchView(),
-            _firstSearch ? _createListView(context) : _performSearch()
-          ],
-        ),
-      ),
+      )
     );
   }
 
   Widget _createSearchView() {
-    return new Container(
-      margin: EdgeInsets.symmetric(vertical: 30),
-      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 1),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(7),
-      ),
-      child: TextField(
-        controller: _searchview,
-        decoration: InputDecoration(
-          hintText: "Search",
-          icon: SvgPicture.asset("assets/icons/search.svg"),
-          border: InputBorder.none,
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100),
+            color: Colors.white
+        ),
+        child: Material(
+          elevation: 3.0,
+          shadowColor: Colors.grey,
+          borderRadius: BorderRadius.circular(100),
+          child: TextField(
+            controller: _searchview,
+            style: TextStyle(fontSize: 15, color: Colors.black87),
+            decoration: InputDecoration(
+              prefixIcon: Icon(Icons.search, color: Colors.black38),
+              hintText: "Search here",
+              border: InputBorder.none,
+            ),
+          ),
         ),
       ),
     );
