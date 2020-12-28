@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="3.0x">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/packages/flutter_signin_button/assets/logos/3.0x/google_dark.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/packages/flutter_signin_button/assets/logos/3.0x/google_light.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/packages/flutter_signin_button/assets/logos/3.0x/facebook_new.png.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

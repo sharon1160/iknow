@@ -57,27 +57,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
       ),
     );
   }
-}
-Widget _nameTextField(){
-  return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
-        child: TextField(
-          keyboardType: TextInputType.text,
-          decoration: InputDecoration( 
-            icon: Icon(Icons.account_box_rounded),
-            hintText: '',
-            labelText: 'Name',
-          ),
-          onChanged: (value){
-            nameRegister = value;
-          },
-        ),
-      );
-    }
-  );
-}
+
+  Widget _nameTextField(){
+    return StreamBuilder(
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: TextField(
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                icon: Icon(Icons.account_box_rounded),
+                hintText: '',
+                labelText: 'Name',
+              ),
+              onChanged: (value){
+                nameRegister = value;
+              },
+            ),
+          );
+        }
+    );
+  }
 
 /*
 Widget _apellTextField(){
@@ -87,7 +87,7 @@ Widget _apellTextField(){
         padding: EdgeInsets.symmetric(horizontal: 30.0),
         child: TextField(
           keyboardType: TextInputType.text,
-          decoration: InputDecoration( 
+          decoration: InputDecoration(
             icon: Icon(Icons.account_box_rounded ),
             hintText: 'Perez Rodriguez',
             labelText: 'Last name',
@@ -102,108 +102,114 @@ Widget _apellTextField(){
 }
 */
 
-Widget _userTextField(){
-  return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
-        child: TextField(
-          keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration( 
-            icon: Icon(Icons.email),
-            hintText: 'example@gmail.com',
-            labelText: 'Email',
-          ),
-          onChanged: (value){
-            emailRegister = value;
-          },
-        ),
-      );
-    }
-  );
-}
-
-Widget _areaTextField(){
-  return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
-        child: TextField(
-          keyboardType: TextInputType.text,
-          decoration: InputDecoration( 
-            icon: Icon(Icons.group ),
-            hintText: 'Administración , Tesoreria, ...',
-            labelText: 'Area',
-          ),
-          onChanged: (value){
-            areaRegister = value;
-          },
-        ),
-      );
-    }
-  );
-}
-
-_passwordTextField(){
+  Widget _userTextField(){
     return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
-        child: TextField(
-          keyboardType: TextInputType.text,
-          obscureText: true,
-          decoration: InputDecoration( 
-            icon: Icon(Icons.lock),
-            hintText: '',
-            labelText: 'Password',
-            suffixIcon: Icon(
-              Icons.visibility,
-              color: Colors.grey[600],
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: TextField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                icon: Icon(Icons.email),
+                hintText: 'example@gmail.com',
+                labelText: 'Email',
+              ),
+              onChanged: (value){
+                emailRegister = value;
+              },
             ),
-          ),
-          onChanged: (value){
-            passwordRegister = value;
-          },
-        ),
-      );
-    }
-  );
+          );
+        }
+    );
+  }
+
+  Widget _areaTextField(){
+    return StreamBuilder(
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: TextField(
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                icon: Icon(Icons.group ),
+                hintText: 'Administración , Tesoreria, ...',
+                labelText: 'Area',
+              ),
+              onChanged: (value){
+                areaRegister = value;
+              },
+            ),
+          );
+        }
+    );
+  }
+
+  _passwordTextField(){
+    return StreamBuilder(
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: TextField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                icon: Icon(Icons.lock),
+                hintText: '',
+                labelText: 'Password',
+                suffixIcon: Icon(
+                  Icons.visibility,
+                  color: Colors.grey[600],
+                ),
+              ),
+              onChanged: (value){
+                passwordRegister = value;
+              },
+            ),
+          );
+        }
+    );
+  }
+
+  Widget _buttonSignUp(){
+    return StreamBuilder(
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return RaisedButton(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 100.0, vertical:14),
+                child: Text('SIGN UP',
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+              elevation: 10.0,
+              color: Color(0xff24dcbb),
+              onPressed:() async {
+                try{
+                  final newUser = _auth.createUserWithEmailAndPassword(email: emailRegister, password: passwordRegister);
+                  if (newUser != null){
+                    Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context){
+                          return LoginScreen();
+                        },
+                      ),
+                    );
+                  }
+                }catch(e) {print(e);}
+              }
+          );
+        }
+    );
+  }
+
 }
 
-Widget _buttonSignUp(){
-  return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return RaisedButton(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 100.0, vertical:14),
-          child: Text('SIGN UP',
-            style: TextStyle(
-              fontSize: 15.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
-        ),
-        elevation: 10.0,
-        color: Color(0xff24dcbb),
-        onPressed:() async {
-          try{
-            final newUser = _auth.createUserWithEmailAndPassword(email: emailRegister, password: passwordRegister);
-            if (newUser != null){
-              Navigator.push(context,
-                MaterialPageRoute(
-                  builder: (context){
-                    return LoginScreen();
-                  },
-                ),
-              );
-            }
-          }catch(e) {print(e);}
-        }
-      );
-    }
-  );
-}
+
+
+

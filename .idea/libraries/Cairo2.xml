@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Cairo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Cairo/Cairo-Regular.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Cairo/Cairo-Black.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Cairo/Cairo-Bold.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Cairo/Cairo-SemiBold.ttf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

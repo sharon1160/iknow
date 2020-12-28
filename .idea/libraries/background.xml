@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="background">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc4.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/plant_3.webp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc5.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/plant_2.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc3.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc3.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/mis_documentos.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc1.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc4.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/bienes_servicios.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc8.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/p.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/misdocss.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/lupa.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/background/doc6.jpg.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="images">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/images/circle1.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/images/meditation_bg.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/iknow/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/images/undraw_pilates_gpdb.png.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

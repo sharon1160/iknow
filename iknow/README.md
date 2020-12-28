@@ -20,5 +20,11 @@ En esta primera revisión tenemos la interfaz de registro, de login y el home pa
 > Al ingresar a la aplicación cada usuario podrá observar sus documentos creados, buscarlos, eliminarlos, crear uno nuevo, o editar alguno.
 
 
-FLutter 
+### Flutter y las Buenas Practicas de Programación:
+
+> Flutter simplificaba mucho el trabajo de desarrollar aplicaciones
+
+> Ya contiene buenas practicas de programación con el simple uso de los WIDGETs
+
+> Todo dentro de una aplicación Flutter es un widget en Flutter, desde un simple Texto, Botones o cualquier diseños de pantalla. Estos widgets se ORGANIZAN en ORDEN JERARQUICO para mostrarse en la pantalla. Los widgets que pueden contener widgets dentro se llaman Container Widget. La mayoría de los widgets de diseño son widgets de contenedor, excepto los widgets que hacen un trabajo mínimo como un "Text Widget".
 

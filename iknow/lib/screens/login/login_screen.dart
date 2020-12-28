@@ -3,43 +3,22 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:iknow/controllers/authentications.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
-//import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
-import 'package:iknow/screens/home_admin/home_admin_screen.dart'; // ADMINISTRADOR
+import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
+//import 'package:iknow/screens/home_admin/home_admin_screen.dart'; // ADMINISTRADOR
 import 'package:firebase_auth/firebase_auth.dart';
-
-String email;
-String password;
 
 void _signIn() async {
   try{
     final creds = await googleSignIn();
-    print('a**************************************************************************************************');
-    print('b**************************************************************************************************');
-    print('c**************************************************************************************************');
-    print('d**************************************************************************************************');
-    print('e**************************************************************************************************');
-    print('f**************************************************************************************************');
-    print(creds);
-    print('a**************************************************************************************************');
-    print('b**************************************************************************************************');
-    print('c**************************************************************************************************');
-    print('d**************************************************************************************************');
-    print('e**************************************************************************************************');
-    print('f**************************************************************************************************');
-
-
   }catch(e){
-    print('No se puede logea: $e');
-    print('ibncorrecto*********************************************');
-
+    print('No se puede logear: $e');
   }
 }
 
 final _auth = FirebaseAuth.instance;
 
 class LoginScreen extends StatefulWidget {
-
-  static String id = 'login';
+   static String id = 'login';
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -47,6 +26,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
 
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -99,7 +80,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   borderRadius: BorderRadius.circular(5),
                 ),
                 onPressed: _signIn,
-              )
+              ),
+
             ],
 
           ),
@@ -107,81 +89,79 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-}
 
-
-Widget _userTextField(){
-  return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
-        child: TextField(
-          keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration(
-            icon: Icon(Icons.email),
-            hintText: 'example@gmail.com',
-            labelText: 'Email',
-          ),
-          onChanged: (value){
-            email = value;
-          },
-        ),
-      );
-    }
-  );
-}
-
-_passwordTextField(){
+  Widget _userTextField(){
     return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
-        child: TextField(
-          keyboardType: TextInputType.emailAddress,
-          obscureText: true,
-          decoration: InputDecoration( 
-            icon: Icon(Icons.lock),
-            hintText: '',
-            labelText: 'Password',
-            suffixIcon: Icon(
-              Icons.visibility,
-              color: Colors.grey[600],
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: TextField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                icon: Icon(Icons.email),
+                hintText: 'example@gmail.com',
+                labelText: 'Email',
+              ),
+              onChanged: (value){
+                email = value;
+              },
             ),
-          ),
-          onChanged: (value){
-            password = value;
-          },
-        ),
-      );
-    }
-  );
+          );
+        }
+    );
+  }
 
-}
-
-Widget _buttonLogin(){
-  return StreamBuilder(
-    builder: (BuildContext context, AsyncSnapshot snapshot){
-      return RaisedButton(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 114.0, vertical:14),
-          child: Text('LOGIN',
-            style: TextStyle(
-              fontSize: 15.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+  _passwordTextField(){
+    return StreamBuilder(
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: TextField(
+              keyboardType: TextInputType.emailAddress,
+              obscureText: true,
+              decoration: InputDecoration(
+                icon: Icon(Icons.lock),
+                hintText: '',
+                labelText: 'Password',
+                suffixIcon: Icon(
+                  Icons.visibility,
+                  color: Colors.grey[600],
+                ),
+              ),
+              onChanged: (value){
+                password = value;
+              },
             ),
-          ),
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5),
-        ),
-        elevation: 10.0,
-        color: Color(0xff24dcbb),
-        onPressed:() async {
-          print(email);
-          /*
+          );
+        }
+    );
+
+  }
+
+  Widget _buttonLogin(){
+    return StreamBuilder(
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return RaisedButton(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 114.0, vertical:14),
+                child: Text('LOGIN',
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+              elevation: 10.0,
+              color: Color(0xff24dcbb),
+              onPressed:() async {
+                print(email);
+                /*
           try{
-        
+
             print('probando---------------------------------------------------');
             final user = await _auth.signInWithEmailAndPassword(
                 email: email, password: password);
@@ -199,16 +179,26 @@ Widget _buttonLogin(){
             print('error****************************************************');
             print(e);}
           */
-          Navigator.push(context,
-            MaterialPageRoute(
-              builder: (context){
-                //return HomeScreen(); // USUARIO COMUN
-                return HomeAdminScreen(); // ADMINISTRADOR
-              },
-            ),
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context){
+                      return HomeScreen(); // USUARIO COMUN
+                      //return HomeAdminScreen(); // ADMINISTRADOR
+                    },
+                  ),
+                );
+              }
           );
         }
-      );
-    }
-  );
+    );
+  }
+
+
 }
+
+
+
+
+
+
+

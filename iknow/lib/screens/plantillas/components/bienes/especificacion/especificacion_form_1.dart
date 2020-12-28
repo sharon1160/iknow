@@ -8,7 +8,31 @@ class EspecificacionForm extends StatefulWidget {
 class _EspecificacionFormState extends State<EspecificacionForm> {
   final _formkey = GlobalKey<FormState>();
 
+  String _distritoVal;
+  String _distritoVal2;
+  List _distritos = [
+    'Coporaque', 'Caylloma', 'Chivay', 'Tuti', 'Achoma'
+  ];
 
+  DateTime _date = DateTime.now();
+  Future<Null> _selectDate (BuildContext context) async {
+    DateTime _datePicker = await showDatePicker(
+      context: context, 
+      initialDate: _date, 
+      firstDate: DateTime(2010), 
+      lastDate: DateTime(2030),
+      selectableDayPredicate: (DateTime val) => val.weekday == 6 || val.weekday == 7 ? false : true,
+    );
+
+    if(_datePicker != null && _datePicker != _date) {
+      setState(() {
+        _date = _datePicker;
+        print(
+          _date.toString(),
+        );
+      });
+    }
+  }
   @override
   Widget build(BuildContext context){
     return  Container(
