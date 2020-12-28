@@ -1,4 +1,4 @@
-# iknow - Versión 1.0.0
+# iknow - Versión 1.2.0
 
 Esta aplicación esta siendo creada para la gestión de documentos en el área de logísitica de una municipalidad. El problema central radica en el manejo de documentos importantes por parte de las partes implicadas, lo cual genera un gran déficit en el manejo de requerimientos de bienes y servicios por parte del estado.
 
