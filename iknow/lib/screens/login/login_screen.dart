@@ -3,8 +3,8 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:iknow/controllers/authentications.dart';
 import 'package:iknow/screens/login/components/already_have_an_account.dart';
 import 'package:iknow/screens/signup/signup_screen.dart';
-import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
-//import 'package:iknow/screens/home_admin/home_admin_screen.dart'; // ADMINISTRADOR
+//import 'package:iknow/screens/home/home_screen.dart'; // USUARIO COMUN
+import 'package:iknow/screens/home_admin/home_admin_screen.dart'; // ADMINISTRADOR
 import 'package:firebase_auth/firebase_auth.dart';
 
 String email;
@@ -202,8 +202,8 @@ Widget _buttonLogin(){
           Navigator.push(context,
             MaterialPageRoute(
               builder: (context){
-                return HomeScreen(); // USUARIO COMUN
-                //return HomeAdminScreen(); // ADMINISTRADOR
+                //return HomeScreen(); // USUARIO COMUN
+                return HomeAdminScreen(); // ADMINISTRADOR
               },
             ),
           );
